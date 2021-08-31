@@ -7,7 +7,7 @@ class NullSafeOperator
     public function pushData(string $dataToInclude): ? self
     {
         array_push($this->data, $dataToInclude);
-        return null;
+        return $this;
     }
 
     public  function info()
