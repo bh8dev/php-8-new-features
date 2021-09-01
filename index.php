@@ -1,10 +1,11 @@
 <?php
 
-require('Constructor/Constructor.php');
-require('Named/Named.php');
-require('Match/MatchOperator.php');
-require('NullSafeOperator/NullSafeOperator.php');
 require('ClassObjects/ClassObjects.php');
+require('Constructor/Constructor.php');
+require('Contains/Contains.php');
+require('Match/MatchOperator.php');
+require('Named/Named.php');
+require('NullSafeOperator/NullSafeOperator.php');
 require('UnionTypes/UnionTypes.php');
 
 echo '<strong>Constructor property promotion</strong>' . '<br>' . '<br>';
@@ -48,5 +49,13 @@ echo '<strong>Union Types</strong>' . '<br>' . '<br>';
 $unionTypes = new UnionTypes();
 
 $unionTypes->setData('some data')?->info();
+
+echo '<br><br>';
+
+echo '<strong>Função para string str_contains</strong>' . '<br>' . '<br>';
+
+$contains = new Contains();
+
+echo $contains->contains(string: 'just a test', valueToSearch: 'test');
 
 echo '<br><br>';
